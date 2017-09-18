@@ -23,10 +23,11 @@ class Persona(models.Model):
     tipo_de_trabajo = models.TextField()
     fecha_de_nacimiento = models.TextField()
     
-class Empleado('Persona'):
+class Empleado(Persona):
     empresa = models.ForeignKey('Empresa')
 
-class Desempleado('Persona'):
+class Desempleado(Persona):
+    pass
 
 class Empresa(models.Model):
     cuil = models.CharField(max_length=12)
