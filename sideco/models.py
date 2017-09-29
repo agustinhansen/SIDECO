@@ -20,9 +20,15 @@ class Sistema(models.Model):
     
 class Persona(models.Model): 
     DNI = models.CharField(max_length=10)
-    tipo_de_trabajo = models.TextField()
+    nombre = models.TextField()
+    apellido = models.TextField()
     fecha_de_nacimiento = models.TextField()
-    
+    profesion = models.TextField()
+    experiencia_laboral = models.TextField()
+    formacion = models.TextField()
+    habilidades = models.TextField()
+     
+ 
 class Empleado(Persona):
     empresa = models.ForeignKey('Empresa')
 

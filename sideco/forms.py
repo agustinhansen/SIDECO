@@ -8,4 +8,4 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Persona
-        fields = ('DNI', 'tipo_de_trabajo',)
+        fields = ('DNI', 'tipo_de_trabajo')
