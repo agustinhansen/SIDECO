@@ -17,6 +17,6 @@ tests/report/
 # Archivos del sistema operativo y editores a ignorar
 .vscode
 .idea
-DS_Store
+.DS_Store
 thumbs.db
 thumbnails.db
