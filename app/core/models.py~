@@ -73,13 +73,3 @@ def update_user_empresa(sender, instance, created, **kwargs):
 class OfertaLaboral(models.Model):
     # empresa = models.ForeignKey(app.core.models.Empresa)
     tipo_de_trabajo_solicitado = models.TextField()
-
-class Trabajo(models.Model):
-    
-    cargo = models.CharField(max_length=20)
-    descripcion = models.TextField(max_length=200)
-    horario = models.CharField(max_length=20)
-    profesion = models.CharField(max_length=20)
-	
-    def __str__(self):
-        return self.cargo

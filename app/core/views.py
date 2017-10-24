@@ -63,4 +63,23 @@ def handle_registro_empresa_form(request):
         form.save()
         return redirect('login')
     else:
-        return render(request, 'registro.html', {'form': form})
+        return render(request, 'registro.html', {'form': form})+
+ 
+  #Eliminar y modificar
+
+def eliminar(request, user_id):
+	User.objects.get(id=user_id).delete()
+	return render(request, 'template.html', {'id': user_id})
+
+
+def editar(request, user_id):
+    user = User.objects.get(id=user_id)
+    if request.method == 'GET':
+        print(user.desocupado.nombre)
+        form = Modificar(instance=user.desocupado)
+    else:
+        form = Modificar(request.POST, instance=user.desocupado)
+        if form.is_valid:
+            form.save()
+        return redirect('login')
+    return render(request, 'registro.html', {'form':form})
