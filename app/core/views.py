@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
-
-from app.core.forms import RegistroDesocupado, RegistroEmpresa
+from django.contrib.auth.models import User
+from app.core.forms import *
 
 @login_required
 def home(request):
@@ -63,7 +63,7 @@ def handle_registro_empresa_form(request):
         form.save()
         return redirect('login')
     else:
-        return render(request, 'registro.html', {'form': form})+
+        return render(request, 'registro.html', {'form': form})
  
   #Eliminar y modificar
 

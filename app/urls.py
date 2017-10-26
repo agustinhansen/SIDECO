@@ -38,7 +38,7 @@ urlpatterns = [
     url(r'^registrar/empresa$', core_views.registro_empresa, name='registrar.empresa'),
     url(r'^eliminar/(?P<user_id>\d+)/$', core_views.eliminar, name="eliminar"),
     url(r'^editar/(?P<user_id>\d+)/$', core_views.editar, name='editar'),
-    url(r'^registrar/trabajo$', core_views.registro_trabajo, name='registrar.trabajo')
+    #url(r'^registrar/trabajo$', core_views.registro_trabajo, name='registrar.trabajo')
     # Estas de abajo son las que tenían ya creadas en su aplicacion. Las comento
     # momentaneamente, pues la de registro ya está y la de edición habrá que adaptarla.
     # url(r'^user/new/$', views.user_new, name='user_new'),

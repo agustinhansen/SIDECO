@@ -1,7 +1,7 @@
 {% extends 'sideco_home.html' %}
 
 {% block content %}
-  <h2>Welcome, {{ user.get_full_name() }} <small>{{ user.username }}</small>!</h2>
+  <h2>Bienvenid@ a Sideco, {{ user.get_full_name() }} <small>(@{{ user.username }})</small>!</h2>
   <p>Sos un: {{ user.profile_type() }}</p>
   <p>Algunos datos relevantes son:</p>
   {% if user.is_empresa() %}
@@ -9,5 +9,10 @@
   {% endif %}
   {% if user.is_desocupado() %}
     <p>DNI: {{ user.profile().DNI }}</p>
+    <p>Profesion: {{ user.profile().profesion }}</p>
+    <p>Habilidades: {{ user.profile().habilidades }}</p>
+    <p>Formacion: {{ user.profile().formacion }}</p>
+    <p>Experiencia laboral: {{ user.profile().experiencia_laboral }}</p>
   {% endif %}
+
 {% endblock %}
