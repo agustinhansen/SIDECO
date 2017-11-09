@@ -67,8 +67,8 @@ def handle_registro_empresa_form(request):
  
   #Eliminar y modificar
 
-def eliminar(request, user_id):
-	User.objects.get(id=user_id).delete()
+def eliminar(request):
+	User.objects.get(id=request.user.id).delete()
 	return redirect('logout')
 
 
