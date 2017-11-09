@@ -15,4 +15,9 @@
     <p>Experiencia laboral: {{ user.profile().experiencia_laboral }}</p>
   {% endif %}
 
+ 
+  <a href="{{ url('logout') }}" target="_self"> <input type="button" name="boton" value="Cerrar sesión" />  </a>
+
+  
+
 {% endblock %}

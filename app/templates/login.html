@@ -1,7 +1,7 @@
 {% extends 'sideco_home.html' %}
 
 {% block content %}
-  <h2>Log in to My Site</h2>
+  <h2>Registrándote</h2>
   {% if form.errors %}
     <p style="color: red">Your username and password didn't match. Please try again.</p>
   {% endif %}
@@ -20,7 +20,11 @@
         {% endif %}
       </p>
     {% endfor %}
-    <button type="submit">Log in</button>
-    <a href="{{ url('registrar.desocupado') }}">New to My Site? Sign up</a>
+    <button type="submit">Iniciar sesión</button>
+    <a href="{{ url('registrar.desocupado') }}">¿Nuevo en el sitio? Regístrate</a>
   </form>
+
+<form> 
+ <a href="{{ url('registrar.empresa') }}" target="_self"> <input type="button" name="boton" value="Registra tu empresa" />  </a> 
+ </form>
 {% endblock %}
