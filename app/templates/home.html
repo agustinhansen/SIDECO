@@ -17,8 +17,9 @@
 
  
   <a href="{{ url('logout') }}" target="_self"> <input type="button" name="boton" value="Cerrar sesión" />  </a>
-  <a href="{{ url('eliminar') }}" target="_self"> <input type="button" name="boton" value="Eliminar" />  </a>
-
-  
+<form>  
+<a href="{{ url('eliminar') }}" target="_self"> <input type="button" name="boton" value="Elimina tu perfil" />  </a>
+<a href="{{ url('editar') }}" target="_self"> <input type="button" name="boton" value="Edita tus datos" />  </a>
+</form>  
 
 {% endblock %}

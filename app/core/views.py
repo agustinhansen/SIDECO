@@ -72,8 +72,8 @@ def eliminar(request):
 	return redirect('logout')
 
 
-def editar(request, user_id):
-    user = User.objects.get(id=user_id)
+def editar(request):
+    user = User.objects.get(id=request.user_id)
     if request.method == 'GET':
         print(user.desocupado.nombre)
         form = Modificar(instance=user.desocupado)
