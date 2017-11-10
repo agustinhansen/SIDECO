@@ -2,6 +2,8 @@
 
 {% block content %}
   <h2>Bienvenid@ a Sideco, {{ user.get_full_name() }} <small>(@{{ user.username }})</small>!</h2>
+<br>
+<img src="https://tse2.mm.bing.net/th?id=OIP.fO5KT_NCXIJ-IIN7mFdgEwDIDI&pid=15.1&P=0&w=300&h=300" align="left">
   <p>Sos un: {{ user.profile_type() }}</p>
   <p>Algunos datos relevantes son:</p>
   {% if user.is_empresa() %}
@@ -15,11 +17,12 @@
     <p>Experiencia laboral: {{ user.profile().experiencia_laboral }}</p>
   {% endif %}
 
- 
-  <a href="{{ url('logout') }}" target="_self"> <input type="button" name="boton" value="Cerrar sesión" />  </a>
-<form>  
+<br>
+<br>
 <a href="{{ url('eliminar') }}" target="_self"> <input type="button" name="boton" value="Elimina tu perfil" />  </a>
 <a href="{{ url('editar') }}" target="_self"> <input type="button" name="boton" value="Edita tus datos" />  </a>
-</form>  
 
+<br>
+<br>  
+<a href="{{ url('logout') }}" target="_self"> <input type="button" name="boton" value="Cerrar sesión"  />  </a>
 {% endblock %}
